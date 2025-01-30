@@ -1,0 +1,132 @@
+.app {
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #f1ecec;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin: 10px 0 20px 0;
+  }
+  
+  .weekly-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    background-color: rgb(248, 243, 243);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(75, 73, 73, 0.1);
+    min-height: calc(100vh - 100px);
+    overflow-x: auto;
+  }
+  
+  .day-column {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(10, 10, 10, 0.05);
+    min-width: 200px;
+    height: 100%;
+  }
+  
+  .day-column h2 {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffcece;
+    white-space: nowrap;
+  }
+  
+  .todo-form {
+    margin-bottom: 10px;
+  }
+  
+  .todo-form input {
+    width: calc(100% - 35px);
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  
+  .todo-form button {
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    background-color: #4CAF50;  
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    line-height: 25px;
+  }
+  
+  .todo-form button:hover {
+    background-color: #32cd32;  /* Slightly darker green on hover */
+  }
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    margin: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ffe5e5;
+    border-radius: 4px;
+  }
+  
+  .todo-item input[type="checkbox"] {
+    margin-right: 8px;
+    min-width: 16px;
+  }
+  
+  .todo-item span {
+    flex: 1;
+    font-size: 0.9em;
+    color: #444;
+    word-break: break-word;
+    margin-right: 5px;
+  }
+  
+  .todo-item button {
+    padding: 3px 6px;
+    background-color: #df6f6f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+    min-width: 50px;
+  }
+  
+  /* Add responsive styles */
+  @media screen and (max-width: 1400px) {
+    .weekly-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .weekly-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .weekly-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Add these to ensure proper scrolling */
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
